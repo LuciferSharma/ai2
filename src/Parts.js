@@ -1,0 +1,9 @@
+import {Text, Box, Tooltip} from '@chakra-ui/react';
+
+export default function Parts({text, timestamp}) {
+  return <Box margin="2" bg='gray.30' border='1px' borderColor='gray.700'>
+    <Text alignContent="center">{text}</Text>
+    <Text color="yellow">{(timestamp[0]/1000)%60 + " - "+ (timestamp[1]/1000)%60}</Text>
+    
+  </Box>
+}
