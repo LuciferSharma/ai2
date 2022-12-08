@@ -19,11 +19,12 @@ import { ColorModeSwitcher } from './ColorModeSwitcher';
 import axios from 'axios';
 import Status from './Status';
 import Result from './Result';
+import './App.css';
 
 const assemblyApi= axios.create({
   baseURL: 'https://api.assemblyai.com/v2',
   headers: {
-    authorization: process.env.REACT_APP_ASSEMBLY_API_KEY,
+    authorization: "1d50d21098674ffaaca0a19607874ef9",
     'content-type': 'application/json',
   },
 });
@@ -142,7 +143,7 @@ function App() {
             />
             </Box>
             <div className="file-uploader">
-            <input type="file" onChange={handleFileInput}/>
+            <input className='custom-file-input' type="file" onChange={handleFileInput}/>
             <button onClick={e => fileInput.current && fileInput.current.click()} className="btn btn-primary"/>
             </div>
           </VStack>
