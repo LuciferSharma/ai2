@@ -8,7 +8,7 @@
    return (
      <div>
         <Text>{transcript.iab_categories_result.results.map((result) => {
-            return <Parts text={result.text} timestamp={[result.timestamp.start,result.timestamp.end]} />
+            return <Parts text={result.text} timestamp={[result.start,result.end]} />
         })}</Text>
         <Topics transcript={transcript}/>
      </div>

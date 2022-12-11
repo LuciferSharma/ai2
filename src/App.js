@@ -68,7 +68,9 @@ function App() {
     
     const {data} = await assemblyApi.post('/transcript', {
       audio_url: uploadResponse.upload_url,
-      iab_categories:true,
+      iab_categories_result: true,
+      
+      
     });
     console.log(data);
 
